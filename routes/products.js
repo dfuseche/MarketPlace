@@ -10,6 +10,7 @@ router.get("/" ,function(req, res){
         if(err){
             res.send(err);
         }else {
+            console.log(result);
             res.send(result);
         }
     })
@@ -21,6 +22,16 @@ router.get("/:idUser", function(req, res){
             res.send(err);
         }else {
             res.send(result.products);
+        }
+    })
+})
+
+router.get("/category/:nameCategory", function(req, res){
+    Product.find({category: req.params.nameCategory}, function(err, products){
+        if(err){
+            res.send(err);
+        }else {
+            res.send(products);
         }
     })
 })

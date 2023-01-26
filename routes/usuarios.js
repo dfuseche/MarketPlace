@@ -5,6 +5,8 @@ const Joi = require("joi");
 const Usuario = require("../controllers/usuario.controller");
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+let jwt = require("jsonwebtoken");
+const jwtKey = process.env.JSON_TOKEN;
 
 
 router.get("/", function(req, res){
@@ -25,7 +27,9 @@ router.get("/:id", function(req, res){
 
 router.post("/", function(req, res){
     const {error} = validateUser(req.body);
+    console.log(req.body)
     if(error){
+        console.log(error.details[0].message)
         return res.status(400).send(error.details[0].message);
     }
     else {
@@ -37,6 +41,7 @@ router.post("/", function(req, res){
         console.log(hashPassword)
         Usuario.findOne({email: email}, function(err, result){
             if(!result){
+                const token = jwt.sign({ email, lName }, jwtKey);
                 const nuevoUsuario = new Usuario ({
                     fName: fName ,
                     lName: lName,
@@ -50,12 +55,18 @@ router.post("/", function(req, res){
                     if(err){
                         res.send(err);
                     }else{
-                        res.send("Usuario registrado");
+                        res.cookie("token", token, { httpOnly: true });
+                        res.send( {
+                            success: true,
+                            msg: "Incorrect email and/or password",
+                            user: nuevoUsuario
+                        });
                     }
                 });
             }
             else{
-                res.send("User with that email already exist");
+                console.log("ya existe")
+                return res.status(401).send("El usuario con ese correo ya existe");
             }
         })
         
