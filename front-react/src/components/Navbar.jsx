@@ -1,8 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import { useForm } from "../hooks/useForm";
 
 function Navbar(){
 
+   
+    const [usuario, setUsuario] = useState(
+
+        JSON.parse(localStorage.getItem("Usuario")),
+    );
 
     const [searchBarText, setSearchBarText] = useForm({
         texto: ""
@@ -15,6 +20,11 @@ function Navbar(){
         backgroundColor: "#0CDE6D"
     }
     function handleLogOut(){
+        localStorage.setItem("Usuario", JSON.stringify({}));
+        fetch("/api/auth/logout").then((response)=> response.json())
+        .then((data) => {
+            window.location.reload();
+        })
         
     }
 
@@ -27,12 +37,12 @@ function Navbar(){
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             
             <div className="navbar-nav ml-auto">
-            <input className="search-bar form-control mr-sm-4" type="search" name="texto" onChange={setSearchBarText} placeholder="Search" aria-label="Search"></input>
-            <button className="btn search-button btn-light btn-outline-success my-2 my-sm-0"  href="/home">Buscar</button>
-            <a className="nav-item nav-link" href="/home">Home </a>
             
-            <a className="nav-item nav-link " href="/signin" tabIndex="-1" aria-disabled="true">Iniciar sesión</a>
-            <a className="nav-item nav-link " onClick={handleLogOut} href="/" tabIndex="-1" aria-disabled="true">Cerrar sesión</a>
+            <a className="nav-item nav-link" href="/home">Home </a>
+            <a className="nav-item nav-link" href="/catalogue">Catalogo </a>
+            {usuario !== null?usuario.fName === undefined?<a className="nav-item nav-link " href="/signin" tabIndex="-1" aria-disabled="true">Iniciar sesión</a>:<a className="nav-item nav-link " onClick={handleLogOut} href="/" tabIndex="-1" aria-disabled="true">Cerrar sesión</a>: <a className="nav-item nav-link " href="/signin" tabIndex="-1" aria-disabled="true">Iniciar sesión</a> }
+            
+            
             </div>
         </div>
         </nav>

@@ -1,36 +1,42 @@
-import React from "react";
+import React, {useState}from "react";
 import Carousel from "./Carousel";
 function Home(){
+
+    const [usuario, setUsuario] = useState(
+        JSON.parse(localStorage.getItem("Usuario")),
+    );
+
     return <div className="home">
-        <h1>Home</h1>
+        <h1>{usuario !== null?usuario.fName === null? null: "Bienvenido": null} {usuario === null? null: usuario.fName} {usuario === null? null: usuario.lName}</h1>
         <Carousel />
         <h1>Categorias</h1>
+        <div className="categorias">
         <div className="row">
             <div className=" col-1">
             </div>
             <div className="col-2">
                 <div className="circles">
-                    <img src="./img/electrodomesticos.png" alt="image" />
+                    <a href="/catalogue/electronicos"><img src="./img/electrodomesticos.png" alt="image" /></a>
                 </div>               
             </div>
             <div className="col-2">
                 <div className="circles">
-                    <img src="./img/hogar.png" alt="image" />
+                    <a href="/catalogue/hogar"><img src="./img/hogar.png" alt="image" /></a>
                 </div>               
             </div>
             <div className="col-2">
                 <div className="circles">
-                    <img src="./img/moda.png" alt="image" />
+                    <a href="/catalogue/moda"><img src="./img/moda.png" alt="image" /></a>
                 </div>               
             </div>
             <div className="col-2">
                 <div className="circles">
-                    <img src="./img/mascotas.png" alt="image" />
+                    <a href="/catalogue/mascotas"><img src="./img/mascotas.png" alt="image" /></a>
                 </div>               
             </div>
             <div className="col-2">
                 <div className="circles">
-                    <img src="./img/deportes.png" alt="image" />
+                    <a href="/catalogue/deportes"><img src="./img/deportes.png" alt="image" /></a>
                 </div>               
             </div>
             <div className=" col-1">
@@ -42,24 +48,27 @@ function Home(){
             </div>
             <div className="col-2">
                 <div className=" circles">
-                    <img src="./img/tecnologia.png" alt="image" />
+                    <a href="/catalogue/tecnologia"><img src="./img/tecnologia.png" alt="image" /></a>
                 </div>               
             </div>
             <div className="col-2">
                 <div className=" circles">
-                    <img src="./img/belleza.png" alt="image" />
+                    <a href="/catalogue/belleza"><img src="./img/belleza.png" alt="image" /></a>
                 </div>               
             </div>
             <div className=" col-2">
                 <div className=" circles">
-                    <img src="./img/salud.png" alt="image" />
+                    <a href="/catalogue/salud"><img src="./img/salud.png" alt="image" /></a>
                 </div>               
             </div>
             <div className=" col-2">
                 <div className=" circles">
-                    <img classname="libros"src="./img/libros.png" alt="image" />
+                    <a href="/catalogue/libros"><img src="./img/libros.png" alt="image" /></a>
                 </div>               
             </div>
+        </div>
+        
+
         </div>
         
     </div>

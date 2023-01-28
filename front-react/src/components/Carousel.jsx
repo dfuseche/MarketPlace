@@ -10,13 +10,13 @@ function Carousel(){
             </ol>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                <img className="d-block w-100" src="https://m.media-amazon.com/images/S/aplus-media/vc/6158d424-0e7c-498b-89f6-fc280931a1f1.__CR0,0,800,600_PT0_SX800_V1___.jpg" alt="First slide"></img>
+                <img className="d-block w-100" src="https://i0.wp.com/get.witei.com/wp-content/uploads/2022/04/cartera-de-productos-ejemplos.jpg?fit=1200%2C675&ssl=1" alt="First slide"></img>
                 </div>
                 <div className="carousel-item">
-                <img className="d-block w-100" src="https://images.autods.com/OfficialSite/New/20201103091044/The-Best-10-Trending-Tech-Gadgets-Dropshipping-Products-To-Sell-in-2021.png" alt="Second slide"></img>
+                <img className="d-block w-100" src="https://www.lifeder.com/wp-content/uploads/2020/02/objetos-tecnol%C3%B3gicos-lifeder-imagen-1.jpg" alt="Second slide"></img>
                 </div>
                 <div className="carousel-item">
-                <img className="d-block w-100" src="https://www.axial.net/wp-content/uploads/2017/12/pets.png" alt="Third slide"></img>
+                <img className="d-block w-100" src="https://cdnuploads.aa.com.tr/uploads/Contents/2021/08/16/thumbs_b_c_16fe09358edae67044cb570fa4fda35c.jpg?v=202011" alt="Third slide"></img>
                 </div>
             </div>
             <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

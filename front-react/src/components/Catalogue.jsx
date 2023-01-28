@@ -4,12 +4,13 @@ import { useState } from "react";
 import ProductCard from "./ProductCard";
 import Pagination from "./Pagination";
 import Filters from "./Filters";
-function Catalogue (){
+import SearchBar from "./SearchBar";
+function Catalogue (props){
 
     const [loading, setLoading] = useState(false);
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [productsPerPage, setProductsPerPage] = useState(5);
+    const [productsPerPage, setProductsPerPage] = useState(8);
 
     useEffect(()=> {
         const fetchProducts = async () => {
@@ -25,6 +26,8 @@ function Catalogue (){
         fetchProducts();
     }, []);
 
+
+
     //Get current posts
     const indexOfLastProduct = currentPage * productsPerPage;
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -34,12 +37,20 @@ function Catalogue (){
         return setCurrentPage(pageNumber);
     }   
 
-    return <div>
-        <h1>Catalogo</h1>
+    return <div className="catalogue">
+        <div className="row">
+            <div className="col-lg-2 col-sm-12">
+                <h1>Catalogo</h1>
+            </div>
+            <div className="col-lg-10 col-sm-12">
+                <SearchBar setProducts={setProducts} products= {products} />
+            </div>
+
+        </div>
             <div className="row">
-                <Filters />
+                <Filters setProducts={setProducts} products= {products} />
                 <div className="col-10">
-                    <ProductCard products={currentProducts} loading = {loading}/>
+                    <ProductCard products={currentProducts} loading = {loading} isMyProducts = {false}/>
                 </div>
                 
                 

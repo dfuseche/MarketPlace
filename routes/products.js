@@ -16,6 +16,17 @@ router.get("/" ,function(req, res){
     })
 })
 
+router.get("/detailProduct/:idProduct", function(req, res){
+    console.log(req.params.idProduct.toString())
+    Usuario.findOne({"products._id": req.params.idProduct.toString()}, function(err, result){
+        if(err){
+            res.send(err);
+        }else {
+            res.send(result)
+        }
+    })
+})
+
 router.get("/:idUser", function(req, res){
     Usuario.findById({_id: req.params.idUser}, function(err, result){
         if(err){
@@ -68,6 +79,7 @@ router.post("/:idUsuario", function(req, res){
 })
 
 router.delete("/:idUsuario/:idProduct", function(req, res){
+    console.log("Borrando producto")
     Usuario.findById(req.params.idUsuario, function(err, user){
         if(err){
             res.send(err);
@@ -83,7 +95,10 @@ router.delete("/:idUsuario/:idProduct", function(req, res){
                         if(err){
                             res.send(err);
                         }else {
-                            res.send("Product deleted");
+                            res.send( {
+                                success: true,
+                                msg: "Producto borrado"
+                            });
                         }
                     })
                 }

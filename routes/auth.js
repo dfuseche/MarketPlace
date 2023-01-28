@@ -15,6 +15,7 @@ router.post("/login", async function (req, res) {
   
   // Logout
   router.get("/logout", async function (req, res) {
+    console.log("Log out")
     res.cookie("token", "", { maxAge: 1 }, { httpOnly: true });
     res.status(200).send();
   });

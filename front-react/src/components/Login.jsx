@@ -28,7 +28,7 @@ function Login(props){
                 Swal.fire("Ups! Parece que tus datos son inválidos");
             break;
             case 401:
-                Swal.fire("Ups! Parece que ya existe un usuario con ese correo")
+                Swal.fire("Ups! El correo o la contraseña son incorrectos")
             break;
             default:
                 Swal.fire({
@@ -36,13 +36,15 @@ function Login(props){
                     icon: "success",
                     button: "Ir a la plataforma",
                 });
+                resp.json().then((data) =>{
+                    console.log(data.user)
+                    localStorage.setItem("Usuario", JSON.stringify(data.user));
+                    props.setUsuario(data.user);
+                    navigate("/home");
+                    
+                })
             }
-            resp.json().then((data) =>{
-                console.log(data.user)
-                localStorage.setItem("Usuario", JSON.stringify(data.user));
-                props.setUsuario(data.user);
-                navigate("home");
-            })
+            
             
         })
     }
@@ -59,7 +61,7 @@ function Login(props){
                 
             </div>
             <div className="row">
-                <button className="btn-signin" onClick ={handleSubmit} type="button">Iniciar sesión</button>
+                <button className=" btn-signin" onClick ={handleSubmit} type="button">Iniciar sesión</button>
             </div>
             
         </form>

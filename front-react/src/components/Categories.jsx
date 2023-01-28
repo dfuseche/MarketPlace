@@ -8,15 +8,15 @@ function Categories(){
                 Categorias
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a className="dropdown-item" href="#">Electronicos</a>
-                    <a className="dropdown-item" href="#">Hogar</a>
-                    <a className="dropdown-item" href="#">Moda</a>
-                    <a className="dropdown-item" href="#">Mascotas</a>
-                    <a className="dropdown-item" href="#">Deportes</a>
-                    <a className="dropdown-item" href="#">Tecnología</a>
-                    <a className="dropdown-item" href="#">Belleza</a>
-                    <a className="dropdown-item" href="#">Salud</a>
-                    <a className="dropdown-item" href="#">Libros</a>
+                    <a className="dropdown-item" href="/catalogue/electronicos">Electronicos</a>
+                    <a className="dropdown-item" href="/catalogue/hogar">Hogar</a>
+                    <a className="dropdown-item" href="//catalogue/moda">Moda</a>
+                    <a className="dropdown-item" href="/catalogue/mascotas">Mascotas</a>
+                    <a className="dropdown-item" href="/catalogue/deportes">Deportes</a>
+                    <a className="dropdown-item" href="/catalogue/tecnologia">Tecnología</a>
+                    <a className="dropdown-item" href="/catalogue/belleza">Belleza</a>
+                    <a className="dropdown-item" href="/catalogue/salud">Salud</a>
+                    <a className="dropdown-item" href="/catalogue/libros">Libros</a>
                 </div>
         </a>
     </div>

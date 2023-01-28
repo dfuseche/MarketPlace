@@ -44,12 +44,14 @@ function Register(props){
                     icon: "success",
                     button: "Ir a la plataforma",
                 });
+                resp.json().then((data) =>{
+                    localStorage.setItem("Usuario", JSON.stringify(data.user));
+                    props.setUsuario(data.user.nombre);
+                    navigate("/home");
+                    window.location.reload();
+                })
             }
-            resp.json().then((data) =>{
-                localStorage.setItem("Usuario", data.user);
-                props.setUsuario(data.user.nombre);
-                navigate("home");
-            })
+            
             
         })
 

@@ -16,20 +16,6 @@ body {
  }
 
 
-/* Search bar */
- .search-bar {
-    width: 1000px;
-    height: 50px;
-    margin-right: 0px;
-
- }
-
-
- .search-button {
-    margin-left: 0px;
-
- }
-
 /***************Down Navbar**************************/
 .categories-nav {
     padding: 15px;
@@ -55,8 +41,13 @@ body {
 }
 /***************Home**************************/
 
+.home {
+    margin: 3rem;
+}
+
 .home h1 {
-    color:#B23CEA
+    color:#B23CEA;
+    font-size: 4rem;
 }
 
 .circles {
@@ -83,10 +74,67 @@ img .libros {
     margin-top: 40px;
 }
 
+.categorias {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+/***************Catalogue**************************/
+
+.catalogue {
+    padding: 3rem;
+}
+
+/* Search bar */
+.search-bar {
+    width: 70rem;
+    height: 50px;
+    margin-right: 0px;
+
+ }
+ 
+ .btn-search {
+    width: 4rem;
+    height: 3rem;
+ }
+
+
+ .search-button {
+    width: 5rem;
+    margin: 2rem;
+    vertical-align: middle;
+    background-color: #B23CEA;
+    color: white;
+    border: white;
+
+ }
+
 /***************Cards**************************/
+
+.spinner-border {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+}
 
 .card-product {
     margin: 30px 30px 30px 30px;
+    text-align: left;
+}
+
+.card-product img {
+    width: 20rem;
+    height: 11rem;
+}
+
+.card-product .price {
+    background-color: #0CDE6D;
+    color: white;
+    text-align: center;
+    
+}
+
+.card-product .product-category {
+    color:#B23CEA;
 }
 /***************Sign in**************************/
 
@@ -133,6 +181,93 @@ form input {
 
 /***************My products**************************/
 
+
+.btn-agregar-producto {
+    background-color:#0CDE6D;
+    border-color: white;
+    border-radius: 15px;
+    width: 24rem;
+    height: 3rem;
+    margin-top: 30px;   
+    color: white;
+    font-size: 1.2rem;
+}
+
+.btn-agregar-producto:hover {
+    background-color: gray;
+}
+
+.btn-eliminar {
+    background-color: #B23CEA;
+    color: white;
+    border: 0px solid ;
+    border-radius: 4%;
+    width: 20rem;
+    height: 2rem;
+}
+
+.select-add-product {
+    border: white;
+    width: 14rem;
+    font-size: 1.5rem;
+}
+
+/***************Product Detail**************************/
+
+.product-detail {
+    padding: 4rem;
+}
+
+.img-detail {
+    width: 50rem;
+}
+
+.category-detail {
+    color:#B23CEA;
+    font-size: 4rem;
+}
+
+.name-detail {
+    font-size: 3rem;
+}
+
+.descrip-detail {
+    color: gray;
+    font-size: 3rem;
+}
+
+.price-detail {
+    color: #0CDE6D;
+    font-size: 6rem;
+}
+/***************Filter**************************/
+
+.filtrar-precio {
+    margin: 2px;
+    margin-bottom: 10px;
+    width: 14rem;
+}
+
+.btn-filtrar {
+    background-color:#B23CEA;
+    color: white;
+    border-radius: 5%;
+    border: 0px;
+    width: 14rem;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+.btn-filtrar:hover{
+    background-color: gray;
+}
+
+.select-filter {
+    border: white;
+    width: 14rem;
+    font-size: 1.5rem;
+    
+}
 
 /***************Footer**************************/
 

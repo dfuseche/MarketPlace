@@ -58,7 +58,7 @@ router.post("/", function(req, res){
                         res.cookie("token", token, { httpOnly: true });
                         res.send( {
                             success: true,
-                            msg: "Incorrect email and/or password",
+                            msg: "Usuario creado",
                             user: nuevoUsuario
                         });
                     }

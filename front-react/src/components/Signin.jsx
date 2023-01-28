@@ -24,10 +24,10 @@ function Signin(props){
             <div className="col-2">
             </div>
             <div className="col-4">
-               <a> <h1 onClick={changeToLogin}>Inicia sesión</h1></a>
+               <a> <h1 onClick={changeToLogin}><b>Inicia sesión</b></h1></a>
             </div>
             <div className="col-4">
-                <h1 onClick={changeToRegister}>Crear cuenta</h1>
+                <h1 onClick={changeToRegister}><b>Crear cuenta</b></h1>
             </div>
             <div className="col-2">
             </div>
