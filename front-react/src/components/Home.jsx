@@ -12,60 +12,64 @@ function Home(){
         <h1>Categorias</h1>
         <div className="categorias">
         <div className="row">
-            <div className=" col-1">
+            <div className=" col-lg-1 col-md-0">
             </div>
-            <div className="col-2">
+            <div className="col-lg-2 col-md-4 col-sm-12 content-circle">
                 <div className="circles">
                     <a href="/catalogue/electronicos"><img src="./img/electrodomesticos.png" alt="image" /></a>
                 </div>               
             </div>
-            <div className="col-2">
+            <div className="col-lg-2 col-md-4 col-sm-12">
                 <div className="circles">
                     <a href="/catalogue/hogar"><img src="./img/hogar.png" alt="image" /></a>
                 </div>               
             </div>
-            <div className="col-2">
+            <div className="col-lg-2 col-md-4 col-sm-12">
                 <div className="circles">
-                    <a href="/catalogue/moda"><img src="./img/moda.png" alt="image" /></a>
+                    <a href="/catalogue/moda"><img className="image-home"src="./img/moda.png" alt="image" /></a>
                 </div>               
             </div>
-            <div className="col-2">
+            <div className="col-lg-2 col-md-4 col-sm-12">
                 <div className="circles">
                     <a href="/catalogue/mascotas"><img src="./img/mascotas.png" alt="image" /></a>
                 </div>               
             </div>
-            <div className="col-2">
+            <div className="col-lg-2 col-md-4 col-sm-12">
                 <div className="circles">
                     <a href="/catalogue/deportes"><img src="./img/deportes.png" alt="image" /></a>
                 </div>               
             </div>
-            <div className=" col-1">
+            <div className=" col-lg-1 col-md-0">
             </div>
-        </div>
-
-        <div className="row second-row">
-            <div className=" col-2">
+            <div className=" col-lg-2 col-md-0">
             </div>
-            <div className="col-2">
+            <div className="col-lg-2 col-md-4 col-sm-12">
                 <div className=" circles">
                     <a href="/catalogue/tecnologia"><img src="./img/tecnologia.png" alt="image" /></a>
                 </div>               
             </div>
-            <div className="col-2">
+            <div className="col-lg-2 col-md-4 col-sm-12">
                 <div className=" circles">
                     <a href="/catalogue/belleza"><img src="./img/belleza.png" alt="image" /></a>
                 </div>               
             </div>
-            <div className=" col-2">
+            <div className=" col-lg-2 col-md-4 col-sm-12">
                 <div className=" circles">
                     <a href="/catalogue/salud"><img src="./img/salud.png" alt="image" /></a>
                 </div>               
             </div>
-            <div className=" col-2">
+            <div className=" col-lg-2 col-md-4 col-sm-12">
                 <div className=" circles">
                     <a href="/catalogue/libros"><img src="./img/libros.png" alt="image" /></a>
                 </div>               
             </div>
+            <div className=" col-lg-2 col-md-0">
+            </div>
+        </div>
+
+        <div className="row second-row">
+            
+            
         </div>
         
 

@@ -50,8 +50,14 @@ body {
     font-size: 4rem;
 }
 
+
+.image-home {
+    position: absolute;
+    
+    left: 50%;}
+
 .circles {
-    position: static;
+    margin:0 auto;
     background: #0CDE6D;
     border-radius: 50%;
     width: 200px;
